@@ -1,5 +1,5 @@
 # interval
-![build status](https://github.com/lezram/interval/workflows/release/badge.svg)
+![build status](https://github.com/lezram/math-interval/workflows/build/badge.svg)
 
 ## Installation
 
