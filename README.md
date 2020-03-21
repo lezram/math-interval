@@ -1,5 +1,6 @@
-# interval
 ![Build](https://github.com/lezram/math-interval/workflows/Build/badge.svg)
+
+# math-interval
 
 ## Installation
 
