@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "moduleResolution": "Node",
+    "outFile": "dist/browser/math-interval.js",
+    "lib": [
+      "es2016"
+    ],
+    "sourceMap": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

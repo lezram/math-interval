@@ -1,0 +1,30 @@
+{
+  "name": "math-interval",
+  "version": "0.0.1",
+  "description": "Working with mathematical intervals",
+  "main": "dist/node/index.js",
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.browser.json",
+    "ci": "npm run test-build & npm t & wait",
+    "test": "jest",
+    "test-build": "npm run build && node e2e/test-build.js",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [
+    "math",
+    "interval"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testdeck/jest": "0.0.6",
+    "@types/jest": "^25.1.4",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "dist"
+  ]
+}

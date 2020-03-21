@@ -1,0 +1,24 @@
+{
+  "moduleFileExtensions": [
+    "ts",
+    "js"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "testMatch": [
+    "**/test/**/*.test.ts"
+  ],
+  "testEnvironment": "node",
+  "collectCoverageFrom": [
+    "./src/**/*.ts"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
