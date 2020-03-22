@@ -1,4 +1,5 @@
 ![Build](https://github.com/lezram/math-interval/workflows/Build/badge.svg)
+[![NPM](https://nodei.co/npm/@lezram/math-interval.png)](https://nodei.co/npm/@lezram/math-interval/)
 
 # @lezram/math-interval
 A very simple interval library
