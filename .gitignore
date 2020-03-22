@@ -1,0 +1,11 @@
+logs
+*.log
+npm-debug.log*
+coverage
+*.lcov
+node_modules/
+.npm
+*.tgz
+dist
+.idea
+.vscode

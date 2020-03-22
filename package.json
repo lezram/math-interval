@@ -1,0 +1,39 @@
+{
+  "name": "@lezram/math-interval",
+  "version": "0.0.3",
+  "description": "Working with mathematical intervals",
+  "main": "dist/node/index.js",
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.browser.json",
+    "ci": "npm run test-build & npm t & wait",
+    "prepublishOnly": "npm run ci",
+    "test": "jest",
+    "test-build": "npm run build && node e2e/test-build.js",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lezram/math-interval.git"
+  },
+  "keywords": [
+    "math",
+    "interval"
+  ],
+  "author": "lezram",
+  "license": "ISC",
+  "devDependencies": {
+    "@testdeck/jest": "0.0.6",
+    "@types/jest": "^25.1.4",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/lezram/math-interval/issues"
+  },
+  "homepage": "https://github.com/lezram/math-interval#readme"
+}
