@@ -1,4 +1,5 @@
 ![Build](https://github.com/lezram/math-interval/workflows/Build/badge.svg)
+
 [![NPM](https://nodei.co/npm/@lezram/math-interval.png)](https://nodei.co/npm/@lezram/math-interval/)
 
 # @lezram/math-interval
@@ -12,10 +13,33 @@ npm i @lezram/math-interval --save
 ```
 
 ## Usage
+### NodeJS
+#### Javascript
+```javascript
+const Interval = require("@lezram/math-interval").Interval;
+const timeInterval = new Interval(Date.UTC(2020, 0, 1), Date.UTC(2020, 0, 3), false, true);
+```
+
+#### Typescript
+```javascript
+import {Interval} from "@lezram/math-interval";
+const timeInterval = new Interval(Date.UTC(2020, 0, 1), Date.UTC(2020, 0, 3), false, true);
+```
+
+#### Browser
+```html
+<script src="math-interval.js"></script>
+<script>
+const Interval = MathInterval.Interval;
+const timeInterval = new Interval(Date.UTC(2020, 0, 1), Date.UTC(2020, 0, 3), false, true);
+console.log(timeInterval);
+</script>
+```
+
+## API
 
 * new Interval(start: number, end: number, includeStart: boolean, includeEnd: boolean)
     ```typescript
-      const Interval = require("@lezram/math-interval").Interval;
       new Interval(1, 2, true, false);
     ```
 * Interval.union(interval1, interval2, ...)
