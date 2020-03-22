@@ -69,3 +69,9 @@ console.log(timeInterval);
     Copy interval
 * `obj.isEqual(interval: Interval): boolean` \
     Check if interval is equal
+
+## Similar libraries
+* [math.interval](https://github.com/xgbuils/math.interval)
+* [math-intervals](https://github.com/pifactory/math-intervals)
+* [math-interval](https://github.com/harunurhan/math-interval)
+* [math-interval-parser](https://github.com/Semigradsky/math-interval-parser)
