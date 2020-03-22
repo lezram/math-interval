@@ -1,6 +1,6 @@
 {
   "name": "@lezram/math-interval",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Working with mathematical intervals",
   "main": "dist/node/index.js",
   "types": "dist/node/index.d.ts",
@@ -8,10 +8,10 @@
     "build": "npm run build:node && npm run build:browser",
     "build:node": "tsc",
     "build:browser": "webpack",
-    "ci": "npm run test-build & npm t & wait",
     "prepublishOnly": "npm run ci",
-    "test": "jest",
+    "ci": "npm run test-build & npm run coverage & wait",
     "test-build": "npm run build && node e2e/test-build.js",
+    "test": "jest",
     "coverage": "jest --coverage"
   },
   "repository": {
