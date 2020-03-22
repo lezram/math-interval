@@ -7,13 +7,14 @@ A very simple interval library
 
 ### node
 ```
-npm i @lezram/math-interval
+npm i @lezram/math-interval --save
 ```
 
 ## Usage
 
 * new Interval(start: number, end: number, includeStart: boolean, includeEnd: boolean)
     ```typescript
+      const Interval = require("@lezram/math-interval").Interval;
       new Interval(1, 2, true, false);
     ```
 * Interval.union(interval1, interval2, ...)
