@@ -13,6 +13,17 @@ describe("IntervalCreateTest", () => {
         });
     });
 
+    test("testIntervalWithZero", () => {
+        let interval = new Interval(0, 0);
+
+        expect(interval).toEqual({
+            start: 0,
+            end: 0,
+            includeStart: true,
+            includeEnd: true
+        });
+    });
+
     test.each([
         [{s: null, e: null}],
         [{s: undefined, e: undefined}],
@@ -38,6 +49,7 @@ describe("IntervalCreateTest", () => {
         [2, 1, true, true],
         [1, 1, false, true],
         [1, 1, true, false],
+        [NaN, NaN, true, true],
     ])("testIntervalEmpty (%d, %d, %s, %s)", (start: number, end: number, includeStart: boolean, includeEnd: boolean) => {
         let interval = new Interval(start, end, includeStart, includeEnd);
 
