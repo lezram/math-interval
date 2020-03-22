@@ -1,6 +1,6 @@
 import {Interval} from "../src/";
 
-describe("IntervalOverlapTest", () => {
+describe("IntervalMatchTest", () => {
 
     test.each([
         [2, 2, true, true],
@@ -43,6 +43,42 @@ describe("IntervalOverlapTest", () => {
         const isOverlapping = interval1.isOverlapping(interval);
 
         expect(isOverlapping).toBeFalsy();
+    });
+
+    test.each([
+        2,
+        3,
+        4,
+        5,
+        new Interval(2, 3, true, true),
+        new Interval(3, 4, true, true),
+        new Interval(4, 5, true, true),
+    ])("testContains(%o)", (value: number | Interval) => {
+        let interval = new Interval(2, 5, true, true);
+
+        const contains = interval.contains(value);
+
+        expect(contains).toBeTruthy();
+    });
+
+    test.each([
+        null,
+        "23",
+        1,
+        2,
+        5,
+        6,
+        new Interval(null, null, null, null),
+        new Interval(1, 2, true, true),
+        new Interval(1, 3, true, true),
+        new Interval(4, 7, true, true),
+        new Interval(5, 7, true, true),
+    ])("testContainsNoMatch(%o)", (value: number | Interval) => {
+        let interval = new Interval(2, 5, false, false);
+
+        const contains = interval.contains(value);
+
+        expect(contains).toBeFalsy();
     });
 
 

@@ -1,4 +1,4 @@
-import {IntervalEmpty, IntervalOverlap, IntervalSort, IntervalUnion} from "./interval-util";
+import {IntervalEmpty, IntervalFrom, IntervalMatch, IntervalSort, IntervalUnion} from "./interval-util";
 import {Util} from "./util/Util";
 
 export class Interval {
@@ -41,7 +41,20 @@ export class Interval {
     }
 
     public isOverlapping(interval: Interval): boolean {
-        return IntervalOverlap.areOverlapping(this, interval);
+        return IntervalMatch.isOverlapping(this, interval);
+    }
+
+    public contains(numberOrInterval: number | Interval): boolean {
+
+        let interval: Interval = new Interval(null, null);
+        if (numberOrInterval && numberOrInterval instanceof Interval) {
+            interval = numberOrInterval;
+        } else if (numberOrInterval && typeof numberOrInterval === "number") {
+            const number = Number(numberOrInterval);
+            interval = new Interval(number, number, true, true);
+        }
+
+        return IntervalMatch.contains(this, interval);
     }
 
     public copy(): Interval {
@@ -65,5 +78,9 @@ export class Interval {
 
     public static union(...intervals: Interval[]): Interval[] {
         return IntervalUnion.union(intervals);
+    }
+
+    public static from(intervalNotation: string): Interval {
+        return IntervalFrom.from(intervalNotation);
     }
 }
