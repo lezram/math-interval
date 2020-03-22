@@ -1,8 +1,9 @@
 {
   "name": "@lezram/math-interval",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Working with mathematical intervals",
   "main": "dist/node/index.js",
+  "types": "dist/node/index.d.ts",
   "scripts": {
     "build": "tsc && tsc -p tsconfig.browser.json",
     "ci": "npm run test-build & npm t & wait",
