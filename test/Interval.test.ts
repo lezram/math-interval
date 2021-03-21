@@ -1,4 +1,4 @@
-import {Interval} from "../src/";
+import {Interval} from "../src";
 import {IntervalMock} from "./mock/IntervalMock";
 
 describe("IntervalTest", () => {

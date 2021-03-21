@@ -21,7 +21,6 @@ export class IntervalMatch {
             (interval2.start <= interval1.end && interval1.end <= interval2.end);
     }
 
-
     public static contains(interval: Interval, intervalToCheck: Interval): boolean {
         if (!this.isIntervalComparable(interval, intervalToCheck)) {
             return false;
@@ -35,11 +34,7 @@ export class IntervalMatch {
     }
 
     private static isIntervalComparable(interval1: Interval, interval2: Interval): boolean {
-        if (!interval1 || !interval2 || interval1.isEmpty() || interval2.isEmpty()) {
-            return false;
-        }
-
-        return true
+        return interval1 && interval2 && !interval1.isEmpty() && !interval2.isEmpty();
     }
 
 }
