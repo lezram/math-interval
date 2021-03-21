@@ -7,7 +7,7 @@ export class IntervalFrom {
             throw new Error(`Invalid interval definition`);
         }
 
-        const regex = new RegExp(/^\{\}|\{\s*([^\s\t\n\r,]+)\s*\}|([\(\[\]])\s*([^\s\t\n\r,]+)\s*,\s*([^\s\t\n\r,]+)\s*([\)\]\[])$/);
+        const regex = new RegExp(/^{}|{\s*([^\s\t\n\r,]+)\s*}|([(\[\]])\s*([^\s\t\n\r,]+)\s*,\s*([^\s\t\n\r,]+)\s*([)\]\[])$/);
         const matches = regex.exec(intervalNotation);
 
         if (matches && matches.length === 6) {
