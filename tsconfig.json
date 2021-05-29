@@ -4,6 +4,7 @@
     "moduleResolution": "Node",
     "declaration": true,
     "outDir": "dist/node",
+    "noImplicitAny": true,
     "lib": [
       "es2016"
     ],
