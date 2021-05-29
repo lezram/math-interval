@@ -1,4 +1,6 @@
 ![Build](https://github.com/lezram/math-interval/workflows/Build/badge.svg)
+[![npm version](https://img.shields.io/npm/v/@lezram/math-interval.svg)](https://www.npmjs.com/package/@lezram/math-interval)
+[![Downloads](http://img.shields.io/npm/dm/@lezram/math-interval.svg)](https://www.npmjs.com/package/@lezram/math-interval)
 
 [![NPM](https://nodei.co/npm/@lezram/math-interval.png)](https://nodei.co/npm/@lezram/math-interval/)
 
