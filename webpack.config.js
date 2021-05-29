@@ -6,9 +6,16 @@ module.exports = {
         'math-interval': './src/index.ts',
         'math-interval.min': './src/index.ts'
     },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist', 'browser'),
+        library: 'MathInterval',
+        umdNamedDefine: true
+    },
     mode: "production",
     devtool: 'source-map',
     optimization: {
+        minimize: true,
         minimizer: [
             new TerserPlugin({
                 include: /\.min\.js$/,
@@ -19,22 +26,18 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                loader: "awesome-typescript-loader",
+                use: [{
+                    loader: 'ts-loader',
+                    options: {
+                        configFile: "tsconfig.browser.json"
+                    }
+                }],
                 exclude: /node_modules/,
-                options: {
-                    configFileName: 'tsconfig.browser.json'
-                },
+
             },
         ],
     },
     resolve: {
         extensions: ['.ts', '.js'],
-    },
-    output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist', 'browser'),
-        libraryTarget: 'var',
-        library: 'MathInterval',
-        umdNamedDefine: true
-    },
+    }
 };
